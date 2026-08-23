@@ -1,0 +1,9 @@
+scikit-learn
+pandas
+numpy
+adversarial-robustness-toolbox
+google-cloud-pubsub
+google-cloud-firestore
+google-cloud-bigquery
+google-genai
+python-dotenv
