@@ -124,4 +124,4 @@ with col_ws2:
     st.image("assets/wireshark_after.png", caption="AFTER: ECH — SNI hidden")
 
 st.divider()
-st.caption("VitalGuard — Patchamomma 2026 | Built by Pooja Baskaran (Pj)")
+st.caption("VitalGuard — Patchamomma 2026 | Built by Pooja Baskaran")
