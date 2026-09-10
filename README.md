@@ -128,7 +128,7 @@ Most anomaly-detection pipelines stop at Agent 2. We went further: we **attacked
 VitalGuard isn't just built on security *theory* — every claim in this project was **empirically tested and captured on video/screenshot** using Wireshark, across multiple real environments (Google Cloud, Cloudflare, a dedicated ECH test service, and our own deployed domain).
 
 ### 1. Our own backend leaks metadata
-We captured our own backend url domain traffic which is given in touch point 2 is exposed in wiresharkfound the SNI field exposing `https://vitalguard-dashboard-321428319627.asia-south1.run.app/` in plaintext — meaning a network observer could infer "this device talks to a Google Cloud health backend" without ever decrypting the payload.
+We captured our own backend url domain traffic which is given in touch point 2 is exposed in wiresharkfound the SNI field exposing `vitalguard-dashboard-321428319627.asia-south1.run.app` in plaintext — meaning a network observer could infer "this device talks to a Google Cloud health backend" without ever decrypting the payload.
 
 ### 2. ECH deployment is inconsistent in the real world
 We tested ECH (Encrypted Client Hello) against Google services, Cloudflare's own domains, and a dedicated ECH test endpoint. Despite the ECH extension being present in the handshake, several of these failed to properly mask the real SNI — the "cover name" mechanism that ECH is supposed to provide was frequently just the real hostname, not a generic decoy.
