@@ -81,13 +81,11 @@ Rather than competing on diagnostic accuracy, VitalGuard competes on trust it de
 
 ## The 5 Agents
 
-| Agent |                 | Function |
-
-|1. Device Integrity   | Validates device signature/auth token; rejects spoofed or cloned devices.
-|2. Data Sanity (ML)   | Isolation Forest–based personalized anomaly detection on BP, symptom, and food-glycemic-load data.
-|3. Model Integrity    | Defends the ML model itself against adversarial evasion attacks — detects implausible reading swings and anomaly-score manipulation designed to fool Agent 2 
-|4. Privacy/Compliance | Cloud KMS field-level encryption, IAM-based least-privilege access control, audit logging, auto-generated HIPAA-equivalent compliance reports.
-|5. Personal Insight   | Statistical correlation + plain-language trend explanation (e.g., food–symptom patterns) — never a diagnosis.
+Agent 1 Device Integrity - Validates device signature/auth token; rejects spoofed or cloned devices.
+Agent 2. Data Sanity (ML) - Isolation Forest–based personalized anomaly detection on BP, symptom, and food-glycemic-load data.
+Agent 3. Model Integrity  - Defends the ML model itself against adversarial evasion attacks — detects implausible reading swings and anomaly-score manipulation designed to fool Agent 2 
+Agent 4. Privacy/Compliance - Cloud KMS field-level encryption, IAM-based least-privilege access control, audit logging, auto-generated HIPAA-equivalent compliance reports.
+Agent 5. Personal Insight -  Statistical correlation + plain-language trend explanation (e.g., food–symptom patterns) — never a diagnosis.
 
 ### Agent 3 in detail — why it matters
 
