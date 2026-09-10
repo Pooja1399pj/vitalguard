@@ -102,6 +102,7 @@ Cloud KMS field-level encryption, IAM-based least-privilege access control, audi
 Statistical correlation + plain-language trend explanation (e.g., food–symptom patterns) — never a diagnosis.
 
 
+
 ### Agent 3 in detail — why it matters
 
 Most anomaly-detection pipelines stop at Agent 2. We went further: we **attacked our own model**. We crafted an adversarial perturbation that took a genuinely dangerous reading (BP 195/125) and nudged it just enough to flip the Isolation Forest's classification from `ANOMALY` to `NORMAL` — a real evasion attack succeeding on an undefended pipeline. Agent 3 then catches this exact attack using rate-of-change monitoring: a BP swing of 70+ points between consecutive readings from the same device is physiologically implausible and gets flagged for manual review, regardless of what the ML model says.
